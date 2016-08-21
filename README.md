@@ -4,18 +4,18 @@
 ##Constants and Variables
 
 In Swift, you make a variable using the var keyword, like this:
-var name = "Suresh"
+
+### var name = "Suresh"
 
 
 Functions let you define re-usable pieces of code that perform specific pieces of functionality. Usually functions are able to receive some values to modify the way they work, but it's not required.
-Let's start with a simple function:
->-----------------------------------
+Let's start with a simple function
 
 func favoriteAlbum() {
     print("My favorite is Fearless")
 }
 
->-----------------------------------
+
 If you put that code into your playground, nothing will be printed. And yes, it is correct. The reason nothing is printed is that we've placed the "My favorite is Fearless" message into a function called favoriteAlbum(), and that code won't be called until we ask Swift to run the favoriteAlbum() function. To do that, add this line of code:
 favoriteAlbum()
 
