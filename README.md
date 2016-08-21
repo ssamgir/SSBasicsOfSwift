@@ -27,7 +27,7 @@ Let's do that now:
 
 ###func favoriteAlbum(album: String) 
 ###{
-  ###  print("My favorite is \(album)")
+###  print("My favorite is \(album)")
 ###}
 
 That tells Swift we want the function to accept one value (called a "parameter"), named "album", that should be a string. We then use string interpolation to write that favorite album directly into our output message.
