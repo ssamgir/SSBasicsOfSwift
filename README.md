@@ -199,11 +199,11 @@ for (cardName, cardValue) in cards
 To control the flow of our code we of course have an if statement.
 
 if cardValue == 11 {
-|	println("Jack")
+		println("Jack")
 } else if cardValue == 12 {
-|	println("Queen")
+		println("Queen")
 } else {
-|	println("Not found")
+		println("Not found")
 }
 
 Note: The if syntax can have parenthesis but they are optional. However, the braces {} are mandatory unlike other languages.
