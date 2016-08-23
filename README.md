@@ -2,26 +2,30 @@
 
 ##Variables
 
-*As with every programming language you have variables which allow you to store data. To declare a variable you have to use the keyword var.
+* As with every programming language you have variables which allow you to store data. To declare a variable you have to use the 	  keyword var.
 
-###var greeting: String = "Hello World"
+## var greeting: String = "Hello World"
 
-*The above code instructs the system that you want to create a variable named greeting which is of type String and it will contain the * text, “Hello World”.
+* The above code instructs the system that you want to create a variable named greeting which is of type String and it will contain * * the text, “Hello World”.
 
 * Swift is smart enough to infer that if you are assigning a string to a variable and in fact that variable will be of type string. So * you need not explicitly specify the type as in the above example. A better and common way of writing the above example would be:
 
 * var greeting = "Hello World" // Inferred type String
+
 * Variables can be modified once created so we could add another line and change our greeting to something else.
 
 * var greeting = "Hello World" // Inferred type String
 
 * greeting = "Hello Swift"
+
 * While writing an application there are many instances where you don’t want to change a variable once it has been initialized. Apple has always had two variants of types mutable and immutable. Mutable meaning the variable can be modified and immutable that it cannot be modified. They prefer immutability by default which means that the values aren’t going to change and it makes your app faster and safer in a multi-threaded environment. To create an immutable variable you need to use the keyword let.
 
 * If we change our greeting example to use let instead of var then the second line will give us a compiler error because we cannot modify greeting.
 
 *let greeting = "Hello World"
+
 *greeting = "Hello Swift" //Compiler error
+
 *Lets take another example so you understand why and when to use let.
 
 *let languageName: String = "Swift"
@@ -66,7 +70,8 @@ Besides strings you have Int for whole numbers. Double and Float for floating-po
 
 A Float and Double vary in precision and how large of a number you can store.
 
-Float: represents a 32-bit floating-point number and the precision of Float can be as little as 6 decimal digits.
+## Float:
+represents a 32-bit floating-point number and the precision of Float can be as little as 6 decimal digits.
 Double: represents a 64-bit floating point number and has a precision of at least 15 decimal digits.
 By default when you write a floating-point number it is inferred as a Double.
 
@@ -76,7 +81,7 @@ You can explicitly specify a Float.
 var version: Float = 1.0
 Collection Types
 
-Array
+## Array
 
 Collections come in two varieties. Firstly, an array which is a collection of data items which can be accessed via an index beginning with 0.
 
@@ -92,7 +97,7 @@ To access an item from the array you need to use the subscript:
 println(cardNames[0])
 Note: we used a function above called println which will print the value “Jack” to the console and then add a new line.
 
-Modifying an Array
+## Modifying an Array
 
 Lets create a new array that contains a todo list.
 
@@ -120,7 +125,7 @@ For example, we can specify our cards by providing their keys and subsequent val
 var cards = ["Jack" : 11, "Queen" : 12, "King" : 13]
 Above we have specified the card names as the keys and their corresponding numerical value. Keys are not restricted to the String type, they can be of any type and so can the values.
 
-Modifying a Dictionary
+## Modifying a Dictionary
 
 What if we wanted to add an “ace” to our cards dictionary? All we have to do is use the key as a subscript and assign it a value. Note: cards is defined as a var which means it can be modified.
 
@@ -133,7 +138,7 @@ To retrieve a value from the dictionary
 println(cards["ace"])
 Control Flow
 
-Looping
+## Looping
 
 What it good is a collection if you cannot loop over it? Swift provides while, do-while,for and for-in loops. Lets take a look at each one of them.
 
@@ -165,21 +170,24 @@ for cardName in cardNames {
 }
 The above code will print out all the card names in the array. We can also use a range. A range of values is denoted by two dots or three dots.
 
-For example:
+## For example:
 
 1…10 – is a range of numbers from 1 to 10. The three dots are known as a closed range because the upper limit is inclusive.
 1..<10 – is a range of numbers from 1 to 9. The two dots with a lesser-than sign is known as a half-closed range because the upper limit is non-inclusive.
+
 Lets print out the 2 times table using for-in with a range:
 
 for number in 1...10 {
 	println("\(number) times 2 is \(number*2)")
 }
+
 We can also iterate over the cards dictionary to print out both the key and the value:
 
 for (cardName, cardValue) in cards {
 	println("\(cardName) = \(cardValue)")
 }
-If Statements
+
+## If Statements
 
 To control the flow of our code we of course have an if statement.
 
@@ -190,9 +198,10 @@ if cardValue == 11 {
 } else {
 	println("Not found")
 }
+
 Note: The if syntax can have parenthesis but they are optional. However, the braces {} are mandatory unlike other languages.
 
-Switch Statement
+## Switch Statement
 
 The switch statement in Swift is very versatile and has a lot of features. Some basic rules about the switch statement:
 
@@ -207,9 +216,10 @@ switch cardValue {
 	default:
 		println("Not found")
 }
+
 Lets say you have a distance variable and you are trying to print a message based on distance. You can use multiple values for each case statement:
 
-switch distance {
+## switch distance {
 	case 0:
 		println("not a valid distance")
 	case 1,2,3,4,5:
@@ -219,6 +229,7 @@ switch distance {
 	default:
 		println("too far")
 }
+
 There are times when even multiple values are limiting. For those instances you can use ranges. What if any distance greater than 10 and less than 100 was considered far?
 
 switch distance {
@@ -237,7 +248,7 @@ switch distance {
 }
 Can you guess what the above code will print?
 
-Functions
+## Functions
 
 Finally, we have been using println in a lot of our examples which is an example of how to use a function. But how can you create your own function?
 
@@ -256,6 +267,7 @@ Of course, we are not restricted to just one parameter. We can pass in multiple 
 func printCard(cardName: String, cardValue: Int) {
 	println("\(cardName) = \(cardValue)")
 }
+
 What if we simply wanted our function to build a string and return the value instead of printing it? Then we can specify a return it which is specified at the end of the function declaration followed by an array ->.
 
 func buildCard(cardName: String, cardValue: Int) -> String {
