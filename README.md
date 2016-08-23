@@ -1,4 +1,4 @@
-Fundamentals
+#Fundamentals
 
 ##Variables
 
@@ -6,19 +6,19 @@ Fundamentals
 
 ###var greeting: String = "Hello World"
 
-*The above code instructs the system that you want to create a variable named greeting which is of type String and it will contain the *text, “Hello World”.
+*The above code instructs the system that you want to create a variable named greeting which is of type String and it will contain the * text, “Hello World”.
 
-*Swift is smart enough to infer that if you are assigning a string to a variable and in fact that variable will be of type string. So *you need not explicitly specify the type as in the above example. A better and common way of writing the above example would be:
+* Swift is smart enough to infer that if you are assigning a string to a variable and in fact that variable will be of type string. So * you need not explicitly specify the type as in the above example. A better and common way of writing the above example would be:
 
-*var greeting = "Hello World" // Inferred type String
-*Variables can be modified once created so we could add another line and change our greeting to something else.
+* var greeting = "Hello World" // Inferred type String
+* Variables can be modified once created so we could add another line and change our greeting to something else.
 
-*var greeting = "Hello World" // Inferred type String
+* var greeting = "Hello World" // Inferred type String
 
-*greeting = "Hello Swift"
-*While writing an application there are many instances where you don’t want to change a variable once it has been initialized. Apple has always had two variants of types mutable and immutable. Mutable meaning the variable can be modified and immutable that it cannot be modified. They prefer immutability by default which means that the values aren’t going to change and it makes your app faster and safer in a multi-threaded environment. To create an immutable variable you need to use the keyword let.
+* greeting = "Hello Swift"
+* While writing an application there are many instances where you don’t want to change a variable once it has been initialized. Apple has always had two variants of types mutable and immutable. Mutable meaning the variable can be modified and immutable that it cannot be modified. They prefer immutability by default which means that the values aren’t going to change and it makes your app faster and safer in a multi-threaded environment. To create an immutable variable you need to use the keyword let.
 
-*If we change our greeting example to use let instead of var then the second line will give us a compiler error because we cannot modify greeting.
+* If we change our greeting example to use let instead of var then the second line will give us a compiler error because we cannot modify greeting.
 
 *let greeting = "Hello World"
 *greeting = "Hello Swift" //Compiler error
